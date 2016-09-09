@@ -18,3 +18,5 @@
 ### Use your service
             // Do some work in the server context
             proxy.DoSomething();
+            
+https://github.com/imatitya/netcorersi/wiki 
