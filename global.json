@@ -1,0 +1,6 @@
+{
+  "projects": [ "src", "test", "../../Core-4.0.0-beta001/src", "../Core-4.0.0-beta001/src" ],
+  "sdk": {
+    "version": "1.0.0-preview2-003121"
+  }
+}
