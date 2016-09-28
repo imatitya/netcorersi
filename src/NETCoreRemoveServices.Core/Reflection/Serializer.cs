@@ -1,8 +1,8 @@
-﻿using System.Text;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
+using System.Text;
 
-namespace NETCoreRemoveServices.Core.Reflection
+namespace NETCoreRemoteServices.Core.Reflection
 {
     public static class Serializer
     {

@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 
-namespace NETCoreRemoveServices.Core.Hosting
+namespace NETCoreRemoteServices.Core.Hosting
 {
     /// <summary>
     /// TCP Async server listener
@@ -13,12 +13,12 @@ namespace NETCoreRemoveServices.Core.Hosting
         /// <summary>
         /// Amount of client handlers that run in parallel
         /// </summary>
-        private readonly int NumOfParallelHandlers;
+        private readonly int m_NumOfParallelHandlers;
 
         /// <summary>
         /// Handlers cancellation flag
         /// </summary>
-        private bool isCancellationRequested;
+        private bool m_IsCancellationRequested;
         private TcpListener m_TcpListener;
         
         public Func<byte[], byte[]> HandlerCallback { get; }
@@ -31,7 +31,7 @@ namespace NETCoreRemoveServices.Core.Hosting
         public TcpServerListener(Func<byte[], byte[]> handlerCallback, int numOfParallelHandlers = 10)
         {
             HandlerCallback = handlerCallback;
-            NumOfParallelHandlers = numOfParallelHandlers;
+            m_NumOfParallelHandlers = numOfParallelHandlers;
         }
 
                 public void Start(IPAddress ip, int port)
@@ -43,7 +43,7 @@ namespace NETCoreRemoveServices.Core.Hosting
             m_TcpListener.Start();
 
             // Get client requests.
-            for(int i=0; i< NumOfParallelHandlers; ++i)
+            for(int i=0; i< m_NumOfParallelHandlers; ++i)
             {
                 m_TcpListener.AcceptTcpClientAsync().ContinueWith(ClientHandler);
             }
@@ -51,7 +51,7 @@ namespace NETCoreRemoveServices.Core.Hosting
 
                 public void Close()
         {
-            isCancellationRequested = true;
+            m_IsCancellationRequested = true;
             m_TcpListener?.Stop();
         }
 
@@ -75,10 +75,8 @@ namespace NETCoreRemoveServices.Core.Hosting
             byte[] buffer = new byte[8096];
 
             // Loop to receive all the data sent by the client.
-            int i = 1;
             do
             {
-                ++i;
                 stream.Read(buffer, 0, buffer.Length);
             }
             while (stream.DataAvailable);
@@ -93,7 +91,7 @@ namespace NETCoreRemoveServices.Core.Hosting
             client.Dispose();
 
             // Start new handler for next client request
-            if(!isCancellationRequested)
+            if(!m_IsCancellationRequested)
             {
                 m_TcpListener.AcceptTcpClientAsync().ContinueWith(ClientHandler);
             }

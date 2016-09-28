@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace NETCoreRemoveServices.Core.Channel.Consumers
+namespace NETCoreRemoteServices.Core.Channel.Consumers
 {
     /// <summary>
     /// Channel consumer API

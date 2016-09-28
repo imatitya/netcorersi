@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Reflection;
 using Castle.DynamicProxy;
-using NETCoreRemoveServices.Core.Reflection;
-using NETCoreRemoveServices.Core.Channel.Consumers;
+using NETCoreRemoteServices.Core.Channel.Consumers;
+using NETCoreRemoteServices.Core.Reflection;
 
-namespace NETCoreRemoveServices.Core.Channel
+namespace NETCoreRemoteServices.Core.Channel
 {
     /// <summary>
     /// Channel interceptor. 

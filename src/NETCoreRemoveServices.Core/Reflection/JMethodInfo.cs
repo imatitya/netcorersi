@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace NETCoreRemoveServices.Core.Reflection
+namespace NETCoreRemoteServices.Core.Reflection
 {
     /// <summary>
     /// JSON serializeable method info object

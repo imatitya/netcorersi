@@ -1,4 +1,4 @@
-﻿namespace NETCoreRemoveServices.Core.Reflection
+﻿namespace NETCoreRemoteServices.Core.Reflection
 {
     internal enum ResponseType
     {

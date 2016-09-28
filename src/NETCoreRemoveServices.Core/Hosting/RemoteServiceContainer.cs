@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using NETCoreRemoteServices.Core.Reflection;
 using System.Net;
 using System.Reflection;
-using NETCoreRemoveServices.Core.Reflection;
 using System.Linq;
 
-namespace NETCoreRemoveServices.Core.Hosting
+namespace NETCoreRemoteServices.Core.Hosting
 {
     public class RemoteServiceContainer : IRemoteServiceContainer
     {

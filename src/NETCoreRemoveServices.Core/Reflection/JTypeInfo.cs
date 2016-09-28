@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace NETCoreRemoveServices.Core.Reflection
+namespace NETCoreRemoteServices.Core.Reflection
 {
     /// <summary>
     /// JSON serializeable type info object

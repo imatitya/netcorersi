@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace NETCoreRemoveServices.Core.Hosting
+namespace NETCoreRemoteServices.Core.Hosting
 {
     /// <summary>
     /// Server listener

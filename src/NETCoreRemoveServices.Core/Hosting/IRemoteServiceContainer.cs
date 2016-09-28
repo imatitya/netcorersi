@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace NETCoreRemoveServices.Core.Hosting
+namespace NETCoreRemoteServices.Core.Hosting
 {
     /// <summary>
     /// The container which hosts all registered services (contracts) that will be available for remote invocation calls.

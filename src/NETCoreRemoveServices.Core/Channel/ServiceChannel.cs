@@ -1,8 +1,8 @@
-﻿using System.Net;
-using NETCoreRemoveServices.Core.Channel.Consumers;
+﻿using NETCoreRemoteServices.Core.Channel.Consumers;
+using System.Net;
 using Castle.DynamicProxy;
 
-namespace NETCoreRemoveServices.Core.Channel
+namespace NETCoreRemoteServices.Core.Channel
 {
     public class ServiceChannel : IServiceChannel
     {

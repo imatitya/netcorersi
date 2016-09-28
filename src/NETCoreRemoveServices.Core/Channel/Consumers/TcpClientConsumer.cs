@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Net.Sockets;
 
-namespace NETCoreRemoveServices.Core.Channel.Consumers
+namespace NETCoreRemoteServices.Core.Channel.Consumers
 {
     /// <summary>
     /// TCP Based client consumer

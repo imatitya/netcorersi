@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 using NETCoreRemoteServices.Tests.Implementation;
-using NETCoreRemoveServices.Core.Channel;
-using NETCoreRemoveServices.Core.Hosting;
+using NETCoreRemoteServices.Core.Channel;
+using NETCoreRemoteServices.Core.Hosting;
 using System.Net;
 using System.Threading.Tasks;
 using Contract;
 using Xunit;
+
 
 namespace NETCoreRemoteServices.Tests
 {
@@ -26,7 +27,7 @@ namespace NETCoreRemoteServices.Tests
         {
             // Configure IP and port
             IPAddress localhost = IPAddress.Loopback;
-            int port = 8000;
+            const int port = 8000;
 
             // Start server 
             m_RemoteServiceContainer = new RemoteServiceContainer();
@@ -56,7 +57,7 @@ namespace NETCoreRemoteServices.Tests
         [Fact]
         public void ClientServerTest_ParallelTest()
         {
-            int numOfCalls = 4;
+            const int numOfCalls = 4;
             Task[] tasks = new Task[numOfCalls];
             for (int i = 0; i < numOfCalls; ++i)
             {
@@ -75,7 +76,7 @@ namespace NETCoreRemoteServices.Tests
         public void ClientServerTest_PerformanceTest()
         {
             DateTime t = DateTime.Now;
-            int numOfCalls = 100;
+            const int numOfCalls = 100;
             for (int i = 0; i < numOfCalls; ++i)
             {
                 m_ProxyTarget.DoSomething();

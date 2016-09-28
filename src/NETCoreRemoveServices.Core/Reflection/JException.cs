@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace NETCoreRemoveServices.Core.Reflection
+namespace NETCoreRemoteServices.Core.Reflection
 {
     internal class JException : Exception
     {

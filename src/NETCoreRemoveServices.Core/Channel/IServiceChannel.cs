@@ -1,7 +1,9 @@
-﻿namespace NETCoreRemoveServices.Core.Channel
+﻿using NETCoreRemoteServices.Core.Hosting;
+
+namespace NETCoreRemoteServices.Core.Channel
 {
     /// <summary>
-    /// Provides a proxy object for remote service hosted by <see cref="NETCoreRemoveServices.Core.Hosting.IRemoteServiceContainer"/> 
+    /// Provides a proxy object for remote service hosted by <see cref="IRemoteServiceContainer"/> 
     /// </summary>
     public interface IServiceChannel
     {

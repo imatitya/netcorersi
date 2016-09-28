@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NETCoreRemoveServices.Core.Reflection
+namespace NETCoreRemoteServices.Core.Reflection
 {
     internal class JResponse
     {
